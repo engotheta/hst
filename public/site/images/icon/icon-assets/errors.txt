@@ -1,0 +1,1 @@
+[2022-7-18 00:37:44] layer "16 x 16 favicon.ico, 16 x 16 favicon-16x16.png, 32 x 32 favicon-32x32.png, 96 x 96 favicon-96x96.png": Unsupported extension: ico

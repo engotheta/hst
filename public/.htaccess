@@ -1,0 +1,37 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    # block access to backup and source files, configurations left
+    <IfModule mod_authz_core.c>
+        <FilesMatch "(^#.*#|\.(bak|conf|json|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$">
+            Require all denied
+        </FilesMatch>
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # prevent mime based attacks
+    Header set X-Content-Type-Options "nosniff"
+
+    # X-XSS-Protection
+    Header set X-XSS-Protection "1; mode=block"
+
+    # X-Frame-Options
+    Header always append X-Frame-Options SAMEORIGIN
+</IfModule>
