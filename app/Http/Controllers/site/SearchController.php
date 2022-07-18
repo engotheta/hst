@@ -73,49 +73,49 @@ class SearchController extends BaseSiteController
         if (!empty($term)) {
             if (curlang() == '_en') {
             
-                $pressResults = PressRelease::where('name_en', 'like', '%' . $term . '%')->orWhere('name_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->orWhere('file_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $pressResults = PressRelease::where('name_en', 'like', '%' . $term . '%')->orWhere('name_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->orWhere('file_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
                                 
-                $speechResults = Speech::where('name_en', 'like', '%' . $term . '%')->orWhere('name_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->orWhere('file_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $speechResults = Speech::where('name_en', 'like', '%' . $term . '%')->orWhere('name_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->orWhere('file_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
                 
                 $publicationResults = Documents::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('file_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
                 $newsResults = News::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_en', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
-                $serviceResults = Service::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_en', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $serviceResults = Service::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_en', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
                 $faqResults = Faq::where('question_en', 'like', '%' . $term . '%')->orWhere('question_sw', 'like', '%' . $term . '%')->orWhere('answer_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
                 $pageResults = Page::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
                 
-                $eventResults = Events::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_en', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->orWhere('location', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $eventResults = Events::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_en', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->orWhere('location', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
                 
-                $announcementResults = Announcement::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $announcementResults = Announcement::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
                                 
-                $administrationResults = Administration::where('fullname', 'like', '%' . $term . '%')->orWhere('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','ASC')->get();
+                // $administrationResults = Administration::where('fullname', 'like', '%' . $term . '%')->orWhere('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','ASC')->get();
 
                 // $howdoiResults = HowDoI::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_en', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
             }else {
 
-                $pressResults = PressRelease::where('name_en', 'like', '%' . $term . '%')->orWhere('name_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->orWhere('file_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $pressResults = PressRelease::where('name_en', 'like', '%' . $term . '%')->orWhere('name_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->orWhere('file_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
                                 
-                $speechResults = Speech::where('name_en', 'like', '%' . $term . '%')->orWhere('name_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->orWhere('file_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $speechResults = Speech::where('name_en', 'like', '%' . $term . '%')->orWhere('name_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->orWhere('file_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
                 $publicationResults = Documents::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('file_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
                 $newsResults = News::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
                 
-                $serviceResults = Service::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $serviceResults = Service::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
                 $faqResults = Faq::where('question_en', 'like', '%' . $term . '%')->orWhere('question_sw', 'like', '%' . $term . '%')->orWhere('answer_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
                 $pageResults = Page::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
-                $eventResults = Events::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->orWhere('location', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $eventResults = Events::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('summary_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->orWhere('location', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
-                $announcementResults = Announcement::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
+                // $announcementResults = Announcement::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
                 
-                $administrationResults = Administration::where('fullname', 'like', '%' . $term . '%')->orWhere('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','ASC')->get();
+                // $administrationResults = Administration::where('fullname', 'like', '%' . $term . '%')->orWhere('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','ASC')->get();
 
                 // $howdoiResults = HowDoI::where('title_en', 'like', '%' . $term . '%')->orWhere('title_sw', 'like', '%' . $term . '%')->orWhere('content_sw', 'like', '%' . $term . '%')->limit(50)->orderBy('id','DESC')->get();
 
@@ -125,16 +125,16 @@ class SearchController extends BaseSiteController
         //return results to search page...
         return view('site.search.index',
             compact('term',
-                'pressResults',
-                'speechResults',
+                // 'pressResults',
+                // 'speechResults',
                 'publicationResults',
                 'newsResults',
-                'serviceResults',
-                'announcementResults',
+                // 'serviceResults',
+                // 'announcementResults',
                 'faqResults',
                 'pageResults',
-                'eventResults',
-                'administrationResults'
+                // 'eventResults',
+                // 'administrationResults'
             )
         );
 

@@ -25,7 +25,7 @@
   }
 
   .border-search{
-    border: 1px solid #2e3289;
+    border: 1px solid var(--primary-color);
   }
 
   #search_nav_sm{
@@ -42,7 +42,7 @@
   
   #search_nav_sm a.active{
     font-weight:bold;
-    background-color:#2e3289;
+    background-color:var(--primary-color);
     color:#fff;
   }
 
@@ -58,7 +58,7 @@
 
         <div class="row mx-0 has-shifting-underline">
 
-          <div class="col-12 py-1 px-0 border-bottom-faded">
+          <div class="col-12 py-1 px-0 ">
             <h5 class="pb-2 position-relative page-title text-uppercase text-primary hover-text-primary"> 
               <span class="d-inline-block py-2 position-relative text-bold text-primary">
                 <span class="px-2222">{{ label('lbl_search') }}</span>
@@ -72,10 +72,10 @@
 
           <div class="col-12 mt-4 col-md-4 px-0 pb-3">
             <div class="sticky-top" id="search_nav_sm">
-              <a href="#"  data-show-only="press-release" class="d-inline-block show-results">
+              {{-- <a href="#"  data-show-only="press-release" class="d-inline-block show-results">
                 {{ label('lbl_press') }} 
                 <span class="badge badge-light bold-600 border-search">{{count($pressResults)}}</span>
-              </a>
+              </a> --}}
               {{-- <a href="#"  data-show-only="howdois" class="d-inline-block show-results">
                 {{ label('lbl_how_doi') }}
                 <span class="badge badge-light bold-600 border-search">{{count($howdoiResults)}}</span>
@@ -84,34 +84,34 @@
                 {{ label('lbl_passengers_info') }}
                 <span class="badge badge-light bold-600 border-search">{{count($passengerResults)}}</span>
               </a> --}}
-              <a href="#"  data-show-only="administration" class="d-inline-block show-results">
+              {{-- <a href="#"  data-show-only="administration" class="d-inline-block show-results">
                 {{ label('lbl_administration') }} 
                 <span class="badge badge-light bold-600 border-search">{{count($administrationResults)}}</span>
-              </a>
-              <a href="#"  data-show-only="news" class="d-inline-block show-results">
+              </a> --}}
+              <a href="#"  data-show-only="news" class="d-inline-block show-results active">
                 {{ label('lbl_news') }} 
                 <span class="badge badge-light bold-600 border-search">{{count($newsResults)}}</span>
               </a>
-              <a href="#" data-show-only="events-search" class="d-inline-block show-results">
+              {{-- <a href="#" data-show-only="events-search" class="d-inline-block show-results">
                 {{ label('lbl_events') }} 
                 <span class="badge badge-light bold-600 border-search">{{count($eventResults)}}</span>
-              </a>
-              <a href="#"  data-show-only="announcements" class="d-inline-block show-results active">
+              </a> --}}
+              {{-- <a href="#"  data-show-only="announcements" class="d-inline-block show-results active">
                 {{ label('lbl_announcements') }} 
                 <span class="badge badge-light bold-600 border-search">{{count($announcementResults)}}</span>
-              </a>
-              <a href="#"  data-show-only="speeches" class="d-inline-block show-results">
+              </a> --}}
+              {{-- <a href="#"  data-show-only="speeches" class="d-inline-block show-results">
                 {{ label('lbl_speeches') }}
                 <span class="badge badge-light bold-600 border-search">{{count($speechResults)}}</span>
-              </a>
+              </a> --}}
               <a href="#" data-show-only="publications" class="d-inline-block show-results">
                 {{ label('lbl_publications') }} 
                 <span class="badge badge-light bold-600 border-search">{{count($publicationResults)}}</span>
               </a>
-              <a href="#" data-show-only="service" class="d-inline-block show-results">
+              {{-- <a href="#" data-show-only="service" class="d-inline-block show-results">
                 {{ label('lbl_our_services') }} 
                 <span class="badge badge-light bold-600 border-search">{{count($serviceResults)}}</span>
-              </a>
+              </a> --}}
               <a href="#" data-show-only="faqs" class="d-inline-block show-results">
                 {{ label('lbl_faq_short') }} 
                 <span class="badge badge-light bold-600 border-search">{{count($faqResults)}}</span>
@@ -133,7 +133,7 @@
             <div class="col-12 px-0  pr-md-5 mt-3">           
               <div style="font-size: 0.8rem;">
 
-                  <div class="press-release d-none p-0">
+                  {{-- <div class="press-release d-none p-0">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 bottom-line"><span class="fas fa-search"></span> {!! label('lbl_press') !!}</h5>
                     </div>
@@ -151,7 +151,7 @@
                     @else
                         <h6 class="mb-1 text-primary">{{ label('lbl_no_information') }}</h6> 
                     @endif 
-                  </div>
+                  </div> --}}
 
                   {{-- <div  class="howdois d-none">
                     <div class="text-secondary my-2"> 
@@ -191,7 +191,7 @@
                     @endif
                   </div> --}}
                   
-                  <div class="administration d-none">
+                  {{-- <div class="administration d-none">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 bottom-line"><span class="fas fa-search"></span> {!! label('lbl_administration') !!}</h5>
                     </div>
@@ -208,16 +208,16 @@
                     @else
                         <h6 class="mb-1 text-primary">{{ label('lbl_no_information') }}</h6> 
                     @endif 
-                  </div>
+                  </div> --}}
 
-                  <div class="news d-none">
+                  <div class="news d-noneeee has-last-no-border">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 bottom-line"><span class="fas fa-search"></span> {!! label('lbl_news') !!}</h5>
                     </div>
                     @if(count($newsResults))                      
                       <div class="mt-3">
                       @foreach($newsResults as $news)
-                          <a href="{!! URL::to('news', $news->slug) !!}" class="border-bottom gray-border d-block mb-3">
+                          <a href="{!! URL::to('news', $news->slug) !!}" class="border-bottom last-no-border gray-border d-block mb-3">
                             <h6 class="mb-1 text-primary bold-600 search-highlight">{{ $news->title }}</h6>                                  
                             <div class="search-highlight">{!! str_limit(strip_tags($news->content),100) !!}</div>
                             <div class="text-faded"> {{ date('F d, Y',strtotime($news->created_at)) }}</div>
@@ -230,7 +230,7 @@
                     @endif 
                   </div>
 
-                  <div  class="events-search d-none">
+                  {{-- <div  class="events-search d-none">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 bottom-line"><span class="fas fa-search"></span> {!! label('lbl_events') !!}</h5>
                     </div>
@@ -250,9 +250,9 @@
                     @else
                       <h6 class="mb-1 text-primary">{{ label('lbl_no_information') }}</h6> 
                     @endif 
-                  </div>
+                  </div> --}}
 
-                  <div class="announcements">
+                  {{-- <div class="announcements">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 bottom-line"><span class="fas fa-search"></span> {!! label('lbl_announcements') !!}</h5>
                     </div>
@@ -270,9 +270,9 @@
                     @else
                         <h6 class="mb-1 text-primary">{{ label('lbl_no_information') }}</h6> 
                     @endif 
-                  </div>
+                  </div> --}}
 
-                  <div class="speeches d-none">
+                  {{-- <div class="speeches d-none">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 bottom-line"><span class="fas fa-search"></span> {!! label('lbl_speeches') !!}</h5>
                     </div>
@@ -290,16 +290,16 @@
                     @else
                         <h6 class="mb-1 text-primary">{{ label('lbl_no_information') }}</h6> 
                     @endif 
-                  </div>
+                  </div> --}}
 
-                  <div class="publications d-none">
+                  <div class="publications d-none has-last-no-border">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 bottom-line"><span class="fas fa-search"></span> {!! label('lbl_publications') !!}</h5>
                     </div>
                     @if(count($publicationResults))
                       <div class="mt-3">
                         @foreach($publicationResults as $publication)
-                          <a target="_blank" href="{!! asset('uploads/documents/'.$publication->{langdb('file')}) !!}" class="border-bottom gray-border d-block mb-3">
+                          <a target="_blank" href="{!! asset('uploads/documents/'.$publication->{langdb('file')}) !!}" class="border-bottom last-no-border gray-border d-block mb-3">
                             <h6 class="mb-1 text-primary bold-600 search-highlight">{!! $publication->title !!} </h6>                                  
                             <div class=" text-faded"> 
                               <span class="mr-1">{{ date('F d, Y',strtotime($publication->created_at))}} </span> | 
@@ -314,7 +314,7 @@
                     @endif 
                   </div>
 
-                  <div class="service d-none">
+                  {{-- <div class="service d-none">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 bottom-line"><span class="fas fa-search"></span> {!! label('lbl_our_services') !!}</h5>
                     </div>
@@ -332,16 +332,16 @@
                     @else
                         <h6 class="mb-1 text-primary">{{ label('lbl_no_information') }}</h6> 
                     @endif 
-                  </div>
+                  </div> --}}
 
-                  <div  class="faqs d-none">
+                  <div  class="faqs d-none has-last-no-border">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 "><span class="fas fa-search"></span> {!! label('lbl_faq') !!}</h5>
                     </div>
                     @if(count($faqResults))
                         <div class="mt-3">
                           @foreach($faqResults as $faq)
-                            <a href="{!! URL::to('faqs', $faq->slug) !!}" class="border-bottom gray-border d-block mb-3">
+                            <a href="{!! URL::to('faqs', $faq->slug) !!}" class="border-bottom last-no-border gray-border d-block mb-3">
                               <h6 class="mb-1 text-primary bold-600 search-highlight">{{ $faq->question }}</h6>                                  
                               <div class="search-highlight">{!! str_limit(strip_tags($faq->answer),100) !!}</div>
                             </a>
@@ -353,14 +353,14 @@
                     @endif 
                   </div>
 
-                  <div  class="pages d-none">
+                  <div  class="pages d-none has-last-no-border">
                     <div class="text-secondary my-2"> 
                       <h5 class="bold-600 bg-light-darker p-2 "><span class="fas fa-search"></span> {!! label('lbl_pages') !!}</h5>
                     </div>
                     @if(count($pageResults))
                         <div class="mt-3">
                           @foreach($pageResults as $page)
-                            <a href="{!! URL::to('pages', $page->slug) !!}" class="border-bottom gray-border d-block mb-3">
+                            <a href="{!! URL::to('pages', $page->slug) !!}" class="border-bottom last-no-border gray-border d-block mb-3">
                               <h6 class="mb-1 text-primary bold-600 search-highlight">{{ $page->title }}</h6>                                  
                               <div class="search-highlight">{!! str_limit(strip_tags($page->content),100) !!}</div>
                             </a>
@@ -390,7 +390,7 @@
 <script type="text/javascript">
 
    var togglers = document.querySelectorAll('.show-results');
-   var showing = document.querySelector('.announcements'); 
+   var showing = document.querySelector('.news'); 
 
 
    togglers.forEach((toggler)=>{

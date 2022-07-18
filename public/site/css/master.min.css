@@ -22946,6 +22946,11 @@ a.text-primary:hover {
   border:unset !important;
 }
 
+.has-last-no-border:last-child .last-no-border{
+  border:unset !important;
+}
+
+
 .has-even-last-no-border:nth-child(odd) .last-no-border_{
   border:unset !important;
 }

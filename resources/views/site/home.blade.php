@@ -49,8 +49,9 @@
                   data-offset="230px" data-rate="0.15">
                   {{-- <img class="d-block w-100" src="{{asset('uploads/gallery/'.$photo->filename)}}" alt="First slide"> --}}
                 </div>                  
-                <div class="bg-primary-very-faded cursor-pointer top-left h-100 w-100 p-2 px-lg-4 carousel-text  d-flex align-items-center ">
-                    <div class="bg-secondary h-100 w-100 position-absolute top-left" style="opacity: 0.2"> </div>
+                <div class="bg-primary-very-fadedddd cursor-pointer top-left h-100 w-100 p-2 px-lg-4 carousel-text  d-flex align-items-center ">
+                    <div class="bg-secondary h-100 w-100 position-absolute top-left" style="opacity: 0.4"> </div>
+                    <div class="bg-primary h-100 w-100 position-absolute top-left" style="opacity: 0.1"> </div>
                     <h2 class="d-none d-sm-block w-100 max-width-480 text-white text-bold text-center position-relative"> {{ str_limit(strip_tags($photo->content),60) }}</h2>
                 </div>
               </div>
